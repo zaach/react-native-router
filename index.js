@@ -98,7 +98,7 @@ var Router = React.createClass({
 
         // Set to false to prevent iOS from hijacking the responder
         var preventDefault = function (evt) {
-            return true;
+            return false;
         };
 
         var Content = route.component;
