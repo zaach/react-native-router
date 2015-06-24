@@ -67,7 +67,9 @@ var Router = React.createClass({
         };
 
         var replaceRoute = function (route) {
-            me.setState({hideHeader: route.hideNavigationBar})
+            route.index = 0
+            me.setState({hideHeader: route.hideNavigationBar, route: route})
+
             navigator.replace(route)
         };
 
