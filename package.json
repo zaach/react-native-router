@@ -30,6 +30,6 @@
     "react-tween-state": "0.0.5"
   },
   "devDependencies": {
-    "react-native": "^0.5.0",
+    "react-native": "^0.5.0"
   }
 }
