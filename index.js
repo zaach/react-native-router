@@ -35,9 +35,11 @@ var Router = React.createClass({
         this.setState({route: route});
     },
 
-    onBack: function (navigator) {
+    onBack: function (header, navigator) {
         if (this.state.route.index > 0) {
+            this.setState({hideHeader: !header})
             navigator.pop();
+
         }
     },
 
@@ -58,8 +60,8 @@ var Router = React.createClass({
             navigator.push(route);
         }.bind(this);
 
-        var goBackwards = function () {
-            this.onBack(navigator);
+        var goBackwards = function (header) {
+            this.onBack(header, navigator);
         }.bind(this);
 
         var goToFirstRoute = function () {
